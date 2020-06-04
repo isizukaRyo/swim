@@ -1,0 +1,983 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.effect-fade {
+	display: none;
+}
+
+.common-content {
+	display: flex;
+	position: relative;
+	/*	border-bottom: solid 1px #efede8;*/
+}
+
+/* ローディング画面 */
+#loading {
+	width: 100vw;
+	height: 100vh;
+	transition: all 0.5s ease-in-out 2s;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+}
+
+.spinner {
+	text-align: center;
+	line-height: 100vh;
+	font-size: 5rem;
+}
+
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1.0);
+		opacity: 0;
+	}
+}
+
+
+
+.loaded {
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+
+.flex-box {
+	display: flex;
+}
+
+.drawer-swim {
+	margin-bottom: 0.5em;
+	font-size: 5rem;
+	margin-left: 0.5em;
+}
+
+.swim-details {
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+
+.swim-details:nth-child(1) {
+	margin-top: 8em;
+}
+
+.menu {}
+
+.menu-item {
+	font-size: 4rem;
+	margin-bottom: 1em;
+	list-style: none;
+}
+
+/*メイン*/
+main {
+	display: block;
+	position: relative;
+	margin-bottom: 700px;
+	z-index: 2;
+	background-color: #fff;
+	padding-bottom: 100px;
+}
+
+.swim {
+	font-size: 3rem;
+	margin-left: 5em;
+	position: fixed;
+	z-index: 100000;
+}
+
+.site-top {
+	width: 50%;
+}
+
+.site-thumbnail {
+	width: 50%;
+	height: 600px;
+	background-image: url("../images/swim.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.site-title {
+	font-size: 4.8rem;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 100;
+	position: absolute;
+	margin-bottom: 2em;
+	bottom: 20%;
+	margin-left: 10%;
+	line-height: 60px;
+}
+
+.site-title-txt {
+	font-size: 1.6rem;
+	font-family: 'Quicksand', sans-serif;
+	letter-spacing: 1px;
+	position: absolute;
+	display: block;
+	line-height: 30px;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+/*WORK*/
+.works {
+	width: 85%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 3rem;
+}
+
+.work-title {
+	font-size: 2.4rem;
+}
+
+.grid-item01 {
+	grid-column: 1/3;
+	height: 300px;
+	background-color: red;
+	position: relative;
+}
+
+.grid-item01:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/book-5202596_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.tohmatsu-title {
+	font-size: 1.8rem;
+	margin: 0.5em 0;
+}
+
+img {
+	width: 100%
+}
+
+.grid-item02 {
+	grid-column: 3/5;
+	position: relative;
+	height: 400px;
+}
+
+.grid-item02:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/cloud-5055011_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.brand-sub {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 3em;
+	color: #fff;
+}
+
+.brand-title {
+	position: absolute;
+	bottom: 15%;
+	margin-left: 1.5em;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.grid-item03 {
+	grid-column: 1/5;
+	position: relative;
+	height: 460px;
+}
+
+.grid-item03:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/clouds-5173612_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.fenix-title {
+	position: absolute;
+	bottom: 20%;
+	margin-left: 3em;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.fenix-txt {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 5em;
+	color: #fff;
+}
+
+
+.fenix-sub {
+	line-height: 20px;
+	font-size: 1.2rem;
+}
+
+
+.grid-item04 {
+	grid-column: 1/3;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 450px;
+}
+
+.grid-item04::before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/dawn-3358468_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.jeep-title {
+	position: absolute;
+	bottom: 15%;
+	margin-left: 1.5em;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.jeep-sub {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 2.5em;
+	color: #fff;
+}
+
+.grid-item05 {
+	grid-column: 3/5;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 350px;
+}
+
+.grid-item05:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/flower-vase-4756381_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.effortless-title {
+	font-size: 1.8rem;
+	margin: 0.5em 0;
+	bottom: 10%;
+}
+
+.effortless-sub {
+	margin: 0.5em 0;
+	bottom: 5%;
+}
+
+.grid-item06 {
+	grid-column: 1/3;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 350px;
+}
+
+.grid-item06:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/forest-5159688_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+
+.moii-title {
+	font-size: 1.8rem;
+	margin: 0.5em 0;
+}
+
+.moii-sub {}
+
+.grid-item07 {
+	grid-column: 3/5;
+	height: 450px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.queens-title {
+	position: absolute;
+	bottom: 15%;
+	margin-left: 1.2em;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.grid-item07:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/hana.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.queens-txt {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 2.5em;
+	color: #fff;
+}
+
+.grid-item08 {
+	grid-column: 1/5;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 650px;
+	position: relative;
+}
+
+.grid-item08:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/iceberg-5163649_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.chrysler-title {
+	position: absolute;
+	bottom: 15%;
+	margin-left: 1.2em;
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.chrysler-txt {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 2.5em;
+	color: #fff;
+}
+
+
+
+.grid-item09 {
+	grid-column: 1/3;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 450px;
+}
+
+.grid-item09:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/landscape-5055384_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.ourour-title {
+	font-size: 1.8rem;
+	margin: 0.5em 0;
+}
+
+.ourour-txt {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 2.5em;
+	color: #fff;
+}
+
+.grid-item10 {
+	grid-column: 3/5;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+
+.grid-item10:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/moon-5175691_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+
+.wagyumafia-title {
+	font-size: 1.8rem;
+	margin: 0.5em 0;
+}
+
+.wagyumafia-txt {
+	color: #000;
+}
+
+.wagyumafia {
+
+	height: 300px;
+}
+
+.journal {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.journal-title {
+	font-size: 2.4rem;
+	margin: 2em 0;
+}
+
+.journal-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 2em;
+}
+
+.grid-item11 {
+	grid-column: 1/3;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+}
+
+.grid-item11:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/mountains-5055387_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.soie-title {
+	position: absolute;
+	color: #fff;
+	bottom: 10%;
+	font-size: 1.4rem;
+	margin-left: 1.2em;
+}
+
+.grid-item12 {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	position: relative;
+}
+
+.grid-item12:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/nature-4988465_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-item13 {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	position: relative;
+}
+
+.grid-item13:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/petals-5100957_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-item14 {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	position: relative;
+}
+
+.grid-item14:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/piggy-bank-5168872_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-item15 {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	position: relative;
+}
+
+.grid-item15:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/sakura.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-item16 {
+	grid-column: 5/3;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	height: 350px;
+	position: relative;
+}
+
+.grid-item16:before {
+	content: '';
+	display: inline-block;
+	background-image: url("../images/vintage-5177353_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.date {
+	position: absolute;
+	bottom: 18%;
+	margin-left: 2.5em;
+	color: #fff;
+}
+
+.item-title {
+	position: absolute;
+	bottom: 10%;
+	margin-left: 1.5em;
+	color: #fff;
+	font-size: 1.6rem;
+}
+
+.inoue {
+	bottom: 25%;
+}
+
+/*フッター*/
+footer {
+	width: 100%;
+	height: 600px;
+	background-image: url("../images/sea-79606_1280.jpg");
+	background-position: center;
+	background-size: cover;
+	position: fixed;
+	bottom: 0;
+
+	z-index: 1;
+}
+
+.footer-title {
+	color: #fff;
+	text-align: center;
+	font-size: 3.6rem;
+	padding-top: 2em;
+}
+
+.footer-list {
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 10em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.footer-img {
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 50px;
+	margin: 0 auto;
+	line-height: 80px;
+	text-align: center;
+}
+
+.footer-item {
+	color: #fff;
+	font-size: 1.4rem;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+}
+
+.footer-sub-item {
+	color: #fff;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+/*レスポンシブ*/
+@media screen and (max-width:768px) {
+	.drawer-nav {
+		height: 100vh !important;
+	}
+
+	.drawer-menu {
+		width: 100% !important;
+		order: 1;
+		margin-top: 2em;
+	}
+
+	.swim-details:nth-child(1) {
+		margin-top: 0;
+	}
+
+	.menu-item {
+		font-size: 3.5rem;
+		margin: 0.5em 0;
+	}
+
+	.menu {
+		width: 100% !important;
+		margin-top: 15em;
+	}
+
+	.flex-box {
+		flex-direction: column;
+	}
+
+	.menu {
+		padding: 0;
+		margin-left: 3em;
+	}
+
+	.swim {
+		margin-left: 1em;
+	}
+
+	.site-top {
+		width: 100%;
+		height: 500px;
+	}
+
+	.common-content {
+		flex-direction: column;
+	}
+
+	.site-title {
+		font-size: 4rem;
+		position: static;
+		margin-top: 3em;
+		margin-left: 1em;
+	}
+
+	.site-thumbnail {
+		width: 100%;
+		height: 500px;
+		margin-bottom: 5em;
+	}
+
+	.grid-item01 {
+		margin-bottom: 10em;
+		height: 400px;
+	}
+
+	.griditem-title {
+		position: static;
+		color: #000;
+		margin-top: 1em;
+		margin-left: 0;
+		font-size: 1.4rem;
+	}
+
+	.brand-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+
+	.brand-sub {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.grid-item03 {
+		margin-bottom: 10em;
+	}
+
+	.fenix-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+	}
+
+	.fenix-txt {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.grid-item04 {
+		margin-bottom: 10em;
+	}
+
+	.jeep-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+	}
+
+	.jeep-sub {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.effortless-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+	}
+
+	.effortless-sub {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.grid-item06 {
+		height: 400px;
+		margin-bottom: 10em;
+	}
+
+	.moii-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+	}
+
+	.grid-item07 {
+		height: 400px;
+	}
+
+	.queens-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+	}
+
+	.queens-txt {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.grid-item08 {
+		margin-bottom: 10em;
+		height: 400px;
+	}
+
+	.chrysler-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+
+	.chrysler-txt {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.grid-item09 {
+		height: 400px;
+	}
+
+	.ourour-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		font-size: 1.4rem;
+	}
+
+	.ourour-txt {
+		position: static;
+		color: #000;
+		margin-left: 0;
+	}
+
+	.grid-item10 {
+		height: 400px;
+	}
+
+	.journal {
+		margin-top: 10em;
+	}
+
+	.grid-item11 {
+		grid-column: 1/3;
+		height: 250px;
+		margin-bottom: 10em;
+	}
+
+	.grid-item12 {
+		grid-column: 5/3;
+		height: 250px;
+	}
+
+	.grid-item13 {
+		grid-column: 1/3;
+		height: 250px;
+		margin-bottom: 10em;
+	}
+
+	.grid-item14 {
+		grid-column: 3/5;
+		height: 250px;
+	}
+
+	.grid-item15 {
+		grid-column: 1/3;
+		height: 250px;
+		margin-bottom: 10em;
+	}
+
+	.grid-item16 {
+		grid-column: 3/5;
+		height: 250px;
+	}
+
+	.date {
+		position: static;
+		color: #000;
+		margin: 1em 0;
+	}
+
+	.item-title {
+		position: static;
+		color: #000;
+		margin-left: 0;
+		font-size: 1.4rem;
+
+	}
+
+	.footer-list {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5em;
+	}
+
+}
+
+/*スマホ*/
+@media screen and (max-width:480px) {
+	.swim {
+		margin-left: 1em;
+	}
+
+	.site-top {
+		height: 350px;
+		padding: 40px 0;
+	}
+
+	.site-title {
+		font-size: 3.5rem;
+		line-height: 45px;
+	}
+
+	.site-title-txt {
+		font-size: 1.4rem;
+		line-height: 25px;
+	}
+
+	.works {
+		grid-gap: 1.5rem;
+	}
+
+	.res-grid {
+		height: 210px;
+	}
+
+	.res-grid-title {
+		font-size: 1.2rem;
+	}
+}
