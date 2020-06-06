@@ -685,8 +685,7 @@ footer {
 
 	.drawer-menu {
 		width: 100% !important;
-		order: 1;
-		margin-top: 2em;
+		margin-top: 29em;
 	}
 
 	.swim-details:nth-child(1) {
@@ -703,13 +702,13 @@ footer {
 		margin-top: 15em;
 	}
 
-	.flex-box {
-		flex-direction: column;
-	}
-
 	.menu {
 		padding: 0;
 		margin-left: 3em;
+	}
+
+	.swim-details {
+		margin-left: 2em;
 	}
 
 	.swim {
@@ -719,10 +718,6 @@ footer {
 	.site-top {
 		width: 100%;
 		height: 500px;
-	}
-
-	.common-content {
-		flex-direction: column;
 	}
 
 	.site-title {
@@ -957,6 +952,10 @@ footer {
 		margin-left: 1em;
 	}
 
+	.drawer-menu {
+		order: 1;
+	}
+
 	.site-top {
 		height: 350px;
 		padding: 40px 0;
@@ -983,4 +982,9 @@ footer {
 	.res-grid-title {
 		font-size: 1.2rem;
 	}
+
+	.common-content {
+		flex-direction: column;
+	}
+
 }
