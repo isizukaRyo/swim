@@ -952,8 +952,17 @@ footer {
 		margin-left: 1em;
 	}
 
+	.menu {
+		margin-top: 30em;
+	}
+
 	.drawer-menu {
 		order: 1;
+		margin-top: 3em;
+	}
+
+	.flex-box {
+		flex-direction: column;
 	}
 
 	.site-top {
