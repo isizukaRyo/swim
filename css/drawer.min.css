@@ -84,7 +84,7 @@
 
 .drawer--top .drawer-hamburger,
 .drawer--top.drawer-open .drawer-hamburger {
-	right: 0
+	right: 10px;
 }
 
 .drawer--left .drawer-nav {
